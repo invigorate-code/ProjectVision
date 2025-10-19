@@ -192,7 +192,8 @@ export default function LandingPage() {
               aria-label="Get your project estimate in minutes - Start free estimate now"
             >
               <Camera className="mr-2 h-5 w-5" aria-hidden="true" />
-              See your project's estimated cost in minutes
+              <span className="hidden sm:inline">See your project's estimated cost in minutes</span>
+              <span className="sm:hidden">Get Estimate</span>
             </Button>
             <Button
               size="lg"
