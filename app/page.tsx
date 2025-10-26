@@ -5,6 +5,12 @@ import { Card } from "@/components/ui/card"
 import { Camera, Clock, DollarSign, Phone, Shield, Lock, CheckCircle, ArrowRight, Star, Menu } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import { BlueprintMotion } from "@/components/blueprint-motion"
+import { AudienceToggle } from "@/components/audience-toggle"
+import { PrivacyBadge } from "@/components/privacy-badge"
+import { StatsRow } from "@/components/stats-row"
+import { FAQ, homeownerFAQs } from "@/components/faq"
+import { getHomeownerCopy } from "@/lib/ab-variants"
+import { homeowner } from "@/lib/tokens"
 
 export default function LandingPage() {
   const observerRef = useRef<IntersectionObserver | null>(null)
@@ -83,6 +89,7 @@ export default function LandingPage() {
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center gap-6">
+              <AudienceToggle />
               <button
                 onClick={() => scrollToSection("how-it-works")}
                 className="text-gray-700 hover:text-[#3A86FF] transition-colors font-medium focus:outline-none focus:underline"
@@ -130,6 +137,9 @@ export default function LandingPage() {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-200 bg-white" role="menu">
               <div className="flex flex-col gap-3">
+                <div className="px-4 py-2">
+                  <AudienceToggle />
+                </div>
                 <button
                   onClick={() => scrollToSection("how-it-works")}
                   className="text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#3A86FF] rounded-lg transition-colors"
@@ -179,20 +189,20 @@ export default function LandingPage() {
             id="hero-heading"
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 text-balance animate-fade-in-up"
           >
-            Clarity for your project, <span className="text-[#3A86FF]">right from the start.</span>
+            {getHomeownerCopy("hero", "headline")}
           </h1>
           <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto text-pretty animate-fade-in-up animation-delay-100">
-            Get a clear, instant AI-powered estimate for your home renovation project. No pressure, no sign-up fees, and
-            no sales calls.
+            {getHomeownerCopy("hero", "subheadline")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animation-delay-200">
             <Button
               size="lg"
-              className="bg-[#3A86FF] hover:bg-[#2E6FCC] text-white px-8 py-6 text-lg rounded-xl shadow-lg hover-grow focus:ring-4 focus:ring-[#3A86FF]/50 focus:outline-none"
-              aria-label="Get your project estimate in minutes - Start free estimate now"
+              style={{ backgroundColor: homeowner.primary }}
+              className="hover:opacity-90 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover-grow focus:ring-4 focus:outline-none"
+              aria-label="Get your project estimate in minutes"
             >
               <Camera className="mr-2 h-5 w-5" aria-hidden="true" />
-              <span className="hidden sm:inline">See your project's estimated cost in minutes</span>
+              <span className="hidden sm:inline">{getHomeownerCopy("hero", "primaryCTA")}</span>
               <span className="sm:hidden">Get Estimate</span>
             </Button>
             <Button
@@ -201,15 +211,17 @@ export default function LandingPage() {
               className="border-2 border-gray-300 px-8 py-6 text-lg rounded-xl bg-white/90 backdrop-blur-sm hover-grow focus:ring-4 focus:ring-gray-300 focus:outline-none"
               aria-label="Learn how Project Vision works"
             >
-              See How It Works
+              {getHomeownerCopy("hero", "secondaryCTA")}
             </Button>
           </div>
 
           <div className="mt-6 flex flex-col items-center gap-4">
             <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-              <Lock className="h-4 w-4 text-[#3A86FF]" aria-hidden="true" />
-              <span>No calls. Your photos stay private. We never share your data.</span>
+              <Lock className="h-4 w-4" style={{ color: homeowner.primary }} aria-hidden="true" />
+              <span>{getHomeownerCopy("trust", "tagline")}</span>
             </div>
+
+            <PrivacyBadge />
 
             {/* Trust Badges */}
             <div
@@ -228,7 +240,7 @@ export default function LandingPage() {
                 className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-gray-200"
                 role="listitem"
               >
-                <Lock className="h-4 w-4 text-[#3A86FF]" aria-hidden="true" />
+                <Lock className="h-4 w-4" style={{ color: homeowner.primary }} aria-hidden="true" />
                 <span className="text-xs font-medium text-gray-700">Privacy-First AI</span>
               </div>
               <div
@@ -239,6 +251,8 @@ export default function LandingPage() {
                 <span className="text-xs font-medium text-gray-700">No Sales Calls</span>
               </div>
             </div>
+
+            <StatsRow theme="homeowner" stats={["Over 1,200 estimates run last month"]} />
           </div>
 
           <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">
@@ -642,6 +656,12 @@ export default function LandingPage() {
           <p className="mt-6 text-sm opacity-75">No credit card required • Takes less than 2 minutes • 100% free</p>
         </div>
       </section>
+
+      {/* ============================================
+          FAQ SECTION
+          Frequently Asked Questions
+          ============================================ */}
+      <FAQ theme="homeowner" items={homeownerFAQs} />
 
       {/* ============================================
           FOOTER
