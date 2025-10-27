@@ -103,7 +103,6 @@ export default function ContractorsPage() {
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center gap-6">
-              <AudienceToggle />
               <button
                 onClick={() => scrollToSection("how-it-works")}
                 className="text-gray-700 hover:text-gray-900 transition-colors font-medium focus:outline-none focus:underline"
@@ -124,16 +123,24 @@ export default function ContractorsPage() {
               </button>
             </div>
 
-            {/* CTA Button */}
+            {/* Right Side: Audience Toggle, CTA Button, Mobile Menu */}
             <div className="flex items-center gap-4">
-              <Button
-                onClick={() => scrollToSection("hero")}
-                className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded-lg shadow-md hover-grow focus:ring-4 focus:ring-gray-800/50 focus:outline-none"
-                aria-label="Join as a contractor"
-              >
-                <span className="hidden sm:inline">Join Network</span>
-                <span className="sm:hidden">Join</span>
-              </Button>
+              {/* Audience Toggle - Always visible on mobile, part of nav on desktop */}
+              <div className="md:hidden">
+                <AudienceToggle />
+              </div>
+
+              {/* Desktop Audience Toggle and CTA */}
+              <div className="hidden md:flex items-center gap-4">
+                <AudienceToggle />
+                <Button
+                  onClick={() => scrollToSection("hero")}
+                  className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded-lg shadow-md hover-grow focus:ring-4 focus:ring-gray-800/50 focus:outline-none"
+                  aria-label="Join as a contractor"
+                >
+                  Join Network
+                </Button>
+              </div>
 
               {/* Mobile Menu Button */}
               <button
@@ -151,9 +158,6 @@ export default function ContractorsPage() {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-gray-200 bg-white" role="menu">
               <div className="flex flex-col gap-3">
-                <div className="px-4 py-2">
-                  <AudienceToggle />
-                </div>
                 <button
                   onClick={() => scrollToSection("how-it-works")}
                   className="text-left px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-gray-900 rounded-lg transition-colors"
@@ -175,6 +179,18 @@ export default function ContractorsPage() {
                 >
                   Testimonials
                 </button>
+                <div className="px-4 pt-2">
+                  <Button
+                    onClick={() => {
+                      scrollToSection("hero")
+                      setMobileMenuOpen(false)
+                    }}
+                    className="w-full bg-gray-800 hover:bg-gray-900 text-white px-6 py-2 rounded-lg shadow-md hover-grow focus:ring-4 focus:ring-gray-800/50 focus:outline-none"
+                    aria-label="Join as a contractor"
+                  >
+                    Join Network
+                  </Button>
+                </div>
               </div>
             </div>
           )}
