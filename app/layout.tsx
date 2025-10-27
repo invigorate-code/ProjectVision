@@ -7,7 +7,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "AI Home Remodeling Estimates | Project Vision",
+  title: "AI Home Remodeling Estimates | Vision",
   description:
     "Get instant, AI-powered home remodeling quotes. Private, transparent, and tailored to your project with trusted local contractors.",
   keywords: [
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     "renovation estimate app",
     "AI-powered home improvement",
   ],
-  authors: [{ name: "Project Vision" }],
-  creator: "Project Vision",
-  publisher: "Project Vision",
+  authors: [{ name: "Vision" }],
+  creator: "Vision",
+  publisher: "Vision",
   robots: {
     index: true,
     follow: true,
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://projectvision.app",
-    title: "Project Vision – Instant AI Remodeling Estimates",
+    title: "Vision – Instant AI Remodeling Estimates",
     description:
       "Get transparent, private, and instant renovation cost estimates with AI. Compare trusted contractors and book your next remodel with confidence.",
-    siteName: "Project Vision",
+    siteName: "Vision",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Project Vision – Instant AI Remodeling Estimates",
+    title: "Vision – Instant AI Remodeling Estimates",
     description:
       "Get transparent, private, and instant renovation cost estimates with AI. Compare trusted contractors and book your next remodel with confidence.",
   },

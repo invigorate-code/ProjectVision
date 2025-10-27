@@ -93,12 +93,12 @@ export default function ContractorsPage() {
             <button
               onClick={() => scrollToSection("hero")}
               className="flex items-center gap-2 text-xl font-bold text-gray-900 hover:text-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-700 rounded-lg px-2 py-1"
-              aria-label="Project Vision home"
+              aria-label="Vision home"
             >
               <div className="bg-gray-800 w-8 h-8 rounded-lg flex items-center justify-center" aria-hidden="true">
                 <Camera className="h-5 w-5 text-white" />
               </div>
-              <span className="hidden sm:inline">Project Vision</span>
+              <span className="hidden sm:inline">Vision</span>
             </button>
 
             {/* Desktop Navigation Links */}
@@ -229,7 +229,7 @@ export default function ContractorsPage() {
               size="lg"
               style={{ backgroundColor: contractor.primary }}
               className="hover:opacity-90 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover-grow focus:ring-4 focus:outline-none"
-              aria-label="Join the Project Vision contractor network"
+              aria-label="Join the Vision contractor network"
             >
               <Award className="mr-2 h-5 w-5" aria-hidden="true" />
               <span className="hidden sm:inline">{getContractorCopy("hero", "primaryCTA")}</span>
@@ -239,7 +239,7 @@ export default function ContractorsPage() {
               size="lg"
               variant="outline"
               className="border-2 border-gray-300 px-8 py-6 text-lg rounded-xl bg-white/90 backdrop-blur-sm hover-grow focus:ring-4 focus:ring-gray-300 focus:outline-none"
-              aria-label="Learn how Project Vision works for contractors"
+              aria-label="Learn how Vision works for contractors"
             >
               {getContractorCopy("hero", "secondaryCTA")}
             </Button>
@@ -373,7 +373,7 @@ export default function ContractorsPage() {
           <div
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             role="list"
-            aria-label="Four steps to join Project Vision"
+            aria-label="Four steps to join Vision"
           >
             {[
               {
@@ -456,7 +456,7 @@ export default function ContractorsPage() {
             id="benefits-heading"
             className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 fade-in-section"
           >
-            Why Contractors Choose Project Vision
+            Why Contractors Choose Vision
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Benefit 1 */}
@@ -587,7 +587,7 @@ export default function ContractorsPage() {
             What Contractors Are Saying
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 fade-in-section">
-            Real stories from professionals who use Project Vision to grow their business.
+            Real stories from professionals who use Vision to grow their business.
           </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto" role="list" aria-label="Contractor testimonials">
             {[
@@ -595,14 +595,14 @@ export default function ContractorsPage() {
                 name: "David L.",
                 role: "General Contractor, 12 Years Experience",
                 quote:
-                  "Project Vision sends me leads that are already well-defined. I spend less time on initial calls and more time doing what I love—building. My win rate has doubled.",
+                  "Vision sends me leads that are already well-defined. I spend less time on initial calls and more time doing what I love—building. My win rate has doubled.",
                 rating: 5,
               },
               {
                 name: "Maria S.",
                 role: "Kitchen & Bath Specialist",
                 quote:
-                  "The homeowners I meet through Project Vision actually know what they want. They've done their research, have realistic budgets, and appreciate quality work. It's a game-changer.",
+                  "The homeowners I meet through Vision actually know what they want. They've done their research, have realistic budgets, and appreciate quality work. It's a game-changer.",
                 rating: 5,
               },
               {
@@ -707,7 +707,7 @@ export default function ContractorsPage() {
               size="lg"
               style={{ backgroundColor: contractor.primary }}
               className="w-full hover:opacity-90 text-white py-6 rounded-xl text-lg hover-grow focus:ring-4 focus:outline-none"
-              aria-label="Join Project Vision as a contractor"
+              aria-label="Join Vision as a contractor"
             >
               Join as a Contractor
               <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
@@ -756,8 +756,8 @@ export default function ContractorsPage() {
           ============================================ */}
       <footer className="px-4 py-12 bg-gray-900 text-gray-400" role="contentinfo">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-lg font-bold text-white mb-2">Project Vision</p>
-          <p className="text-sm">© 2025 Project Vision. All rights reserved.</p>
+          <p className="text-lg font-bold text-white mb-2">Vision</p>
+          <p className="text-sm">© 2025 Vision. All rights reserved.</p>
           <nav className="flex justify-center gap-6 mt-6 text-sm" aria-label="Footer navigation">
             <a
               href="#"

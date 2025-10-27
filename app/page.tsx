@@ -79,12 +79,12 @@ export default function LandingPage() {
             <button
               onClick={() => scrollToSection("hero")}
               className="flex items-center gap-2 text-xl font-bold text-gray-900 hover:text-[#3A86FF] transition-colors focus:outline-none focus:ring-2 focus:ring-[#3A86FF] rounded-lg px-2 py-1"
-              aria-label="Project Vision home"
+              aria-label="Vision home"
             >
               <div className="bg-[#3A86FF] w-8 h-8 rounded-lg flex items-center justify-center" aria-hidden="true">
                 <Camera className="h-5 w-5 text-white" />
               </div>
-              <span className="hidden sm:inline">Project Vision</span>
+              <span className="hidden sm:inline">Vision</span>
             </button>
 
             {/* Desktop Navigation Links */}
@@ -225,7 +225,7 @@ export default function LandingPage() {
               size="lg"
               variant="outline"
               className="border-2 border-gray-300 px-8 py-6 text-lg rounded-xl bg-white/90 backdrop-blur-sm hover-grow focus:ring-4 focus:ring-gray-300 focus:outline-none"
-              aria-label="Learn how Project Vision works"
+              aria-label="Learn how Vision works"
             >
               {getHomeownerCopy("hero", "secondaryCTA")}
             </Button>
@@ -582,7 +582,7 @@ export default function LandingPage() {
               <Button
                 variant="outline"
                 className="w-full mt-8 border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white py-6 rounded-xl text-lg bg-transparent hover-grow focus:ring-4 focus:ring-gray-300 focus:outline-none"
-                aria-label="Join Project Vision as a contractor"
+                aria-label="Join Vision as a contractor"
               >
                 Join as a Contractor
                 <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
@@ -605,7 +605,7 @@ export default function LandingPage() {
             What People Are Saying
           </h2>
           <p className="text-lg text-gray-600 text-center mb-12 fade-in-section">
-            Real stories from homeowners and contractors who trust Project Vision.
+            Real stories from homeowners and contractors who trust Vision.
           </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto" role="list" aria-label="Customer testimonials">
             {[
@@ -620,7 +620,7 @@ export default function LandingPage() {
                 name: "David L.",
                 role: "Local Pro",
                 quote:
-                  "Project Vision sends me leads that are already well-defined. I spend less time on initial calls and more time doing what I love—building.",
+                  "Vision sends me leads that are already well-defined. I spend less time on initial calls and more time doing what I love—building.",
                 rating: 5,
               },
             ].map((testimonial, index) => (
@@ -685,8 +685,8 @@ export default function LandingPage() {
           ============================================ */}
       <footer className="px-4 py-12 bg-gray-900 text-gray-400" role="contentinfo">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-lg font-bold text-white mb-2">Project Vision</p>
-          <p className="text-sm">© 2025 Project Vision. All rights reserved.</p>
+          <p className="text-lg font-bold text-white mb-2">Vision</p>
+          <p className="text-sm">© 2025 Vision. All rights reserved.</p>
           <nav className="flex justify-center gap-6 mt-6 text-sm" aria-label="Footer navigation">
             <a
               href="#"

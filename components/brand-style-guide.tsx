@@ -1,10 +1,10 @@
 import { ProjectVisionLogo, ProjectVisionWordmark } from "./project-vision-logo"
 
 /**
- * PROJECT VISION BRAND STYLE GUIDE
+ * VISION BRAND STYLE GUIDE
  *
  * This component serves as a living style guide and reference
- * for designers and developers working with the Project Vision brand.
+ * for designers and developers working with the Vision brand.
  *
  * Ready for export to Framer or Figma components.
  */
@@ -15,7 +15,7 @@ export function BrandStyleGuide() {
       <header className="border-b border-gray-200 pb-8">
         <ProjectVisionWordmark size={48} />
         <p className="mt-4 text-gray-600 max-w-2xl">
-          Project Vision is an AI-powered home remodeling estimation platform that empowers cautious homeowners with
+          Vision is an AI-powered home remodeling estimation platform that empowers cautious homeowners with
           instant, transparent, and private cost estimates.
         </p>
       </header>
@@ -164,7 +164,7 @@ export function BrandStyleGuide() {
         <div className="bg-gray-50 p-8 rounded-lg space-y-4">
           <h3 className="font-semibold text-gray-900">Blueprint + Flat Fill</h3>
           <p className="text-gray-600">
-            Project Vision uses a clean, modern illustration style that combines line art with flat color fills, evoking
+            Vision uses a clean, modern illustration style that combines line art with flat color fills, evoking
             a blueprint aesthetic while remaining approachable.
           </p>
 

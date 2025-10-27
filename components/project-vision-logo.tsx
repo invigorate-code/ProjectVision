@@ -4,7 +4,7 @@ interface ProjectVisionLogoProps {
 }
 
 /**
- * Project Vision Logo Component
+ * Vision Logo Component
  *
  * Design Concept: Stylized house outline forming an eye (symbolizing Vision)
  * - The house roof forms the upper eyelid
@@ -24,7 +24,7 @@ export function ProjectVisionLogo({ className = "", size = 40 }: ProjectVisionLo
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      aria-label="Project Vision Logo"
+      aria-label="Vision Logo"
       role="img"
     >
       {/* House outline forming eye shape */}
@@ -69,7 +69,7 @@ export function ProjectVisionWordmark({ className = "", size = 40 }: ProjectVisi
     <div className={`flex items-center gap-3 ${className}`}>
       <ProjectVisionLogo size={size} />
       <div className="flex flex-col">
-        <span className="text-xl font-bold text-brand-neutral-dark leading-none">Project Vision</span>
+        <span className="text-xl font-bold text-brand-neutral-dark leading-none">Vision</span>
         <span className="text-xs text-muted-foreground leading-none mt-0.5">AI Remodeling Estimates</span>
       </div>
     </div>

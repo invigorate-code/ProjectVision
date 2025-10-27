@@ -1,5 +1,5 @@
 /**
- * Project Vision Design Tokens
+ * Vision Design Tokens
  * Centralized brand colors and theme configuration for homeowner and contractor audiences
  */
 

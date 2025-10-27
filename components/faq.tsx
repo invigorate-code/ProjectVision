@@ -68,7 +68,7 @@ export const homeownerFAQs: FAQItem[] = [
       "Your privacy is our top priority. Your photos and project details are encrypted and stored securely. Administrators cannot view your content. Information is only shared with contractors when you explicitly choose to connect with them.",
   },
   {
-    question: "Do I have to hire a contractor through Project Vision?",
+    question: "Do I have to hire a contractor through Vision?",
     answer:
       "Not at all. You can use our estimates to plan your project independently, get quotes from contractors you already know, or browse our network of vetted professionals when you're ready. There's no obligation.",
   },
